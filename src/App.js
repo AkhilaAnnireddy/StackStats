@@ -1,9 +1,23 @@
 
+// import './App.css';
+import LandingPage  from './Components/Pages/Landingpage/Landingpage.js';
+import { ProfilePage } from './Components/Pages/Profilepage/Profilepage.js';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+
 
 function App() {
   return (
     <div className="App">
-      <h3>DEVSTACKS</h3>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={LandingPage}/>
+          <Route exact path='/profile' component = {ProfilePage}/>
+        </Switch>
+      </Router>
     </div>
   );
 }
