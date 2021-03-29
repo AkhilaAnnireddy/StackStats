@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import  {withRouter} from 'react-router-dom';
-
+import './Landingpage.css'
 class LandingPage extends Component {
   constructor (props) {
     super(props)
@@ -20,18 +20,20 @@ class LandingPage extends Component {
 
   render () {
     return (
-      <div className='searchbar-container'>
-        <form onSubmit={e => e.preventDefault()}>
+      <div className='searchbar-container centered'>
+        <form className='example' onSubmit={e => e.preventDefault()}>
+          <h1>Dev-Stacks</h1>
+          <br></br>
           <input
             type='text'
             size='45'
-            placeholder='Stackoverflow username'
+            placeholder='Find Stackoverflow users...'
             onChange={this.handleSearch.bind(this)}
             value={this.state.username} />
             <button
             type='submit'
             onClick={this.handleGoClick.bind(this)}>
-            Search
+            search
           </button>
         </form>
       </div>
