@@ -1,15 +1,16 @@
 /* .Landing */
 body{
-  background: url("../../../Images/bg5.jpg") no-repeat center center fixed; 
+  background: url("../../../Images/bg1.webp") no-repeat center center fixed; 
   background-size: cover;
   height: 100%;
   overflow: hidden;
 }
 
 h1{
-  color: rgb(221, 216, 216);
-  font-size: 42px;
-  font-family: "Lucida Console", "Courier New", monospace;
+  font-size: 43.5px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .centered {
@@ -28,21 +29,23 @@ form.example input[type=text] {
   padding: 10px;
   font-size: 17px;
   border: 3.5px solid grey;
-  float: left;
+  /* float: left; */
   width: 80%;
   background: #f1f1f1;
   border-radius: 25px;
+  outline: none;
 }
 
 form.example button {
   padding: 10px;
-  margin: 2px;
+  margin: 2%;
   background: #2196F3;
   color: white;
   font-size: 17px;
   border: 1px solid grey;
-  border-radius: 25px;
+  border-radius: 50%;
   cursor: pointer;
+  outline: none;
 }
 
 form.example button:hover {
