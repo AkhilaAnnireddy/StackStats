@@ -1,0 +1,44 @@
+.profile {
+  height: 150px;
+  width: 900px;
+  padding: 15px;
+  display: flex;
+  box-shadow: 1px 1px 9px 1px darkgrey;
+  border-radius: 4px;
+  margin-top: 25px;
+  margin-left: 18%;
+}
+
+.profile img {
+  height: 150px;
+  width: 150px;
+  box-shadow: 1px 1px 5px 1px darkgrey;
+  border-radius: 4px;
+}
+
+.content {
+  margin-left: 25px;
+  padding: 10px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 1px 1px 5px 1px darkgrey;
+  border-radius: 4px;
+}
+
+.content .info-1 {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+p {
+  margin: 0px;
+}
+
+.content .info-1 .name {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.content .info-1 .id {
+  font-size: 15px;
+}

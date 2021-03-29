@@ -30,6 +30,10 @@ export class ProfilePage extends React.Component{
 
     profiledata = ()=>{
         const image= this.state.data.profile_image
+        // const { badges }=this.state.data.badge_counts
+        // Object.keys(badges).map((key, index) => ( 
+        //             console.log({badges[key]})
+        //   ))
         return (
             <ProfileData
                 userid={this.state.userid}
@@ -38,7 +42,6 @@ export class ProfilePage extends React.Component{
                 profileimage={image}
                 reputation={this.state.data.reputation}
                 employeestatus={this.state.data.is_employee}
-                // bronze={this.state.data.badge_counts.}
             />
         )
     }
@@ -46,9 +49,9 @@ export class ProfilePage extends React.Component{
     render()
     {
         console.log(this.state.data)
+        console.log(this.state.data.badge_counts)
         return(
             <div>
-                <h1>hello, {this.props.location.state.username}</h1>
                 {this.profiledata()}
             </div>
         )
