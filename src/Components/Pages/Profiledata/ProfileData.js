@@ -1,10 +1,13 @@
 import {React, Component} from 'react';
 import './profiledata.css';
 
+
 export class ProfileData extends Component{
     render()
     {
         return(
+            <div>
+         
             <div className='profile'>
                 <img alt='profileimage' src= {this.props.profileimage} />
                 <div className='content'>
@@ -22,6 +25,7 @@ export class ProfileData extends Component{
                         <p>{this.props.employeestatus}</p>
                     </div>  
                 </div>
+            </div>
             </div>
         )
     }

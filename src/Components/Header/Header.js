@@ -4,15 +4,13 @@ import { Link } from "react-router-dom";
 import { withRouter } from 'react-router-dom';
 import Landingpage from "../Pages/Landingpage/Landingpage";
 
-class Navbar extends Component{
+class Header extends Component{
     render(){
         return(
             <header>
 			<div >
 				<nav className='navbar navbar-expand-md navbar-dark bg-dark'>
 					<Link className='navbar-brand text-white logo' to='/'>
-						
-						
                         DevStacks
 					</Link>
 
@@ -26,4 +24,4 @@ class Navbar extends Component{
 	);
     }
 }
-export default Navbar;
+export default Header;

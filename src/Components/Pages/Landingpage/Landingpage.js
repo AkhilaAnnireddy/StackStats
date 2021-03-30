@@ -20,10 +20,11 @@ class LandingPage extends Component {
 
   render () {
     return (
-      <div className='searchbar-container centered'>
-        <form className='example' onSubmit={e => e.preventDefault()}>
-          <h1>Dev-Stacks</h1>
-          <input
+      
+        <div className='searchbar-container centered bg'>
+          <form className='example' onSubmit={e => e.preventDefault()}>
+            <h1>Dev-Stacks</h1>
+            <input
             type='text'
             size='45'
             placeholder='Find Stackoverflow users...'
@@ -33,9 +34,9 @@ class LandingPage extends Component {
             type='submit'
             onClick={this.handleGoClick.bind(this)}>
             <i class="fas fa-search"></i>
-          </button>
-        </form>
-      </div>
+            </button>
+          </form>
+        </div>
     )
   }
 }

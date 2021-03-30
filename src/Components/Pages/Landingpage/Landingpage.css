@@ -1,12 +1,19 @@
 /* .Landing */
-body{
-  background: url("../../../Images/bg1.webp") no-repeat center center fixed; 
-  background-size: cover;
+body,html{
+height:100%;
+margin:0;
+}
+.bg{
+  background: url("../../../Images/bg1.webp"); 
   height: 100%;
-  overflow: hidden;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1{
+  margin-top: 40vh; 
   font-size: 43.5px;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   color: #ffffff;
@@ -26,11 +33,13 @@ h1{
 }
 
 form.example input[type=text] {
+  margin-top: vh;
+  margin-left:8%;
   padding: 10px;
   font-size: 17px;
   border: 3.5px solid grey;
   /* float: left; */
-  width: 80%;
+  width: 25%;
   background: #f1f1f1;
   border-radius: 25px;
   outline: none;
@@ -39,8 +48,8 @@ form.example input[type=text] {
 form.example button {
   padding: 10px;
   margin: 2%;
-  background: #2196F3;
-  color: white;
+  background: #ffffff;
+  color: rgb(42, 33, 94);
   font-size: 17px;
   border: 1px solid grey;
   border-radius: 50%;
@@ -49,5 +58,5 @@ form.example button {
 }
 
 form.example button:hover {
-  background: #0b7dda;
+  background: #87bad8;
 }
