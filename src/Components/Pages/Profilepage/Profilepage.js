@@ -53,7 +53,7 @@ export class ProfilePage extends React.Component{
         console.log(this.state.data.badge_counts)
         return(
             <div>
-                <Header username={this.state.data.display_name} handleGoClick={this.handleGoClick}/>
+                <Header username={this.state.data.display_name} />
                 {this.profiledata()}
             </div>
         )
