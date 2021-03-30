@@ -1,14 +1,15 @@
 import React from 'react';
 import axios from 'axios';
 import {ProfileData} from '../Profiledata/ProfileData.js';
+import Header from '../../Header/Header'
 
 export class ProfilePage extends React.Component{
-
+    
     state= {
         data:[],
         userid:null
-    }
-
+    }    
+   
     componentDidMount = () =>
     {
         this.getdata()
@@ -25,7 +26,6 @@ export class ProfilePage extends React.Component{
                 console.log(error)
         })
     };
-
     profiledata = ()=>{
         const image= this.state.data.profile_image
         // const { badges }=this.state.data.badge_counts
@@ -48,10 +48,12 @@ export class ProfilePage extends React.Component{
 
     render()
     {
+        
         console.log(this.state.data)
         console.log(this.state.data.badge_counts)
         return(
             <div>
+                <Header username={this.state.data.display_name} handleGoClick={this.handleGoClick}/>
                 {this.profiledata()}
             </div>
         )
