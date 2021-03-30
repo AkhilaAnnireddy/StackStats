@@ -4,8 +4,6 @@ import {ProfileData} from '../Profiledata/ProfileData.js';
 
 export class ProfilePage extends React.Component{
 
-    
-
     state= {
         data:[],
         userid:null
@@ -35,6 +33,7 @@ export class ProfilePage extends React.Component{
         //             console.log({badges[key]})
         //   ))
         return (
+           <div>
             <ProfileData
                 userid={this.state.userid}
                 displayname={this.state.data.display_name}
@@ -43,6 +42,7 @@ export class ProfilePage extends React.Component{
                 reputation={this.state.data.reputation}
                 employeestatus={this.state.data.is_employee}
             />
+            </div>
         )
     }
 
