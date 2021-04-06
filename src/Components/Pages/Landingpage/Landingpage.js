@@ -15,7 +15,7 @@ class LandingPage extends Component {
 
   handleGoClick = (e) =>{
       e.preventDefault()
-      this.props.history.push({pathname:'/profile',state:{username: this.state.username}});
+      this.props.history.push({pathname:'/profile/'+this.state.username,state:{username: this.state.username}});
   }
 
   render () {

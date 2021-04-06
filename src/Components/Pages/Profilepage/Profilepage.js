@@ -6,17 +6,25 @@ import Header from '../../Header/Header'
 export class ProfilePage extends React.Component{
     
     state= {
+        username:this.props.location.state.username,
         data:[],
         userid:null
     }    
-   
+    handleChange=(user1)=>
+    {
+        this.setState({username:user1})
+    }
     componentDidMount = () =>
+    {
+        console.log(this.state.username)
+        this.getdata()
+    }
+    componentDidUpdate=(prevState,prevProps)=>
     {
         this.getdata()
     }
-
     getdata = (username) =>{
-        axios.get(`https://api.stackexchange.com/2.2/users?order=desc&sort=reputation&inname=${this.props.location.state.username}&site=stackoverflow`).then((response)=>{
+        axios.get(`https://api.stackexchange.com/2.2/users?order=desc&sort=reputation&inname=${this.state.username}&site=stackoverflow`).then((response)=>{
             this.setState(
                 {   data: response.data.items[0],
                     userid: response.data.items[0].user_id
@@ -53,7 +61,7 @@ export class ProfilePage extends React.Component{
         console.log(this.state.data.badge_counts)
         return(
             <div>
-                <Header username={this.state.data.display_name} />
+                <Header username={this.state.username} handleChange={this.handleChange.bind(this)}/>
                 {this.profiledata()}
             </div>
         )
