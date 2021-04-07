@@ -29,11 +29,13 @@ class LandingPage extends Component {
             size='45'
             placeholder='Find Stackoverflow users...'
             onChange={this.handleSearch.bind(this)}
-            value={this.state.username} />
-            <button
+            value={this.state.username} 
+           
+            />
+             <button
             type='submit'
             onClick={this.handleGoClick.bind(this)}>
-            <i class="fas fa-search"></i>
+            <i className="fas fa-search"></i>
             </button>
           </form>
         </div>

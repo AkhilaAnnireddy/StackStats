@@ -1,33 +1,31 @@
 .profile {
-  height: 150px;
-  width: 900px;
+  align-self: center;
+  height: 200px;
+  width: 1000px;
   padding: 15px;
   display: flex;
   box-shadow: 1px 1px 9px 1px darkgrey;
   border-radius: 4px;
   margin-top: 25px;
-  margin-left: 18%;
+  margin-left: 12.5%;
 }
 
 .profile img {
-  height: 120px;
-  width: 150px;
-  box-shadow: 1px 1px 5px 1px darkgrey;
+  height: 170px;
+  width: 170px;
   border-radius: 4px;
 }
 
 .content {
   margin-left: 25px;
-  padding: 10px;
+  padding: 12px;
   width: 80%;
   display: flex;
-  justify-content: space-between;
-  box-shadow: 1px 1px 5px 1px darkgrey;
-  border-radius: 4px;
 }
 
 .content .info-1 {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
+  margin-left: 5%;
 }
 
 p {
@@ -35,10 +33,14 @@ p {
 }
 
 .content .info-1 .name {
-  font-size: 30px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
 .content .info-1 .id {
   font-size: 15px;
+}
+
+.info-2{
+  margin-left: 30%;
 }
