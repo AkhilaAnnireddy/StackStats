@@ -1,12 +1,7 @@
 .profile {
-<<<<<<< HEAD
   align-self: center;
   height: 200px;
   width: 1000px;
-=======
-  height: 15%;
-  width: 70%;
->>>>>>> 4facc11087b6a30949007a1ff34c286357defd1c
   padding: 15px;
   display: flex;
   box-shadow: 1px 1px 9px 1px darkgrey;
@@ -16,14 +11,8 @@
 }
 
 .profile img {
-<<<<<<< HEAD
   height: 170px;
   width: 170px;
-=======
-  height: auto;
-  width: auto;
-  box-shadow: 1px 1px 5px 1px darkgrey;
->>>>>>> 4facc11087b6a30949007a1ff34c286357defd1c
   border-radius: 4px;
 }
 
