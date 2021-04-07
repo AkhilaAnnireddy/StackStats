@@ -17,12 +17,19 @@ export class ProfileData extends Component{
                         </div>
                         <div className='id'>
                             <p><b>Userid :</b> {this.props.userid}</p>
-                            <p><b>Reputation :</b> {this.props.reputation}</p>
+                            <p><b>Status :</b>{this.props.employee_status}</p>
+                            <p><b>Location :</b>{this.props.location}</p>
+                            {/* <p><b>Last Seen :</b>{this.props.last_seen}</p> */}
                             <a href={this.props.link}>Profile link</a>
                         </div>
                     </div>
                     <div className='info-2'>
-                        <p>{this.props.employeestatus}</p>
+                        <p><b>Reputation :</b>{this.props.reputation}</p>
+                        <ul><b>Badges</b>
+                        <li>Bronze :{this.props.bronze}</li> 
+                        <li>Silver :{this.props.silver}</li>
+                        <li>Gold:{this.props.gold}</li> 
+                        </ul>
                     </div>  
                 </div>
             </div>
