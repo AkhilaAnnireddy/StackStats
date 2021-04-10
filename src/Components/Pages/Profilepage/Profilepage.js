@@ -1,14 +1,15 @@
 import React from 'react';
 import axios from 'axios';
 import {ProfileData} from '../Profiledata/ProfileData.js';
-import Header from '../../Header/Header'
+import Header from '../../Header/Header';
+import Answer from '../../Answer'
 
 export class ProfilePage extends React.Component{
     
     state= {
         username:this.props.location.state.username,
         data:[],
-        userid:null
+        userid:null,
     }    
     handleChange=(user1)=>
     {
@@ -18,10 +19,11 @@ export class ProfilePage extends React.Component{
     {
         console.log(this.state.username)
         this.getdata()
+        //this.getdata2()
     }
     componentDidUpdate=(prevState,prevProps)=>
     {
-        this.getdata()
+        //this.getdata()
     }
     getdata = (username) =>{
         axios.get(`https://api.stackexchange.com/2.2/users?order=desc&sort=reputation&inname=${this.state.username}&site=stackoverflow`).then((response)=>{
@@ -34,16 +36,17 @@ export class ProfilePage extends React.Component{
                 console.log(error)
         })
     };
-    // getdata2 = (userid) =>{
-    //     axios.get(`https://api.stackexchange.com/2.2/users/${this.state.userid}/questions?order=desc&sort=activity&site=stackoverflow`).then((response)=>{
-    //         this.setState(
-    //             {   data2: response.data.items[0]
-    //             }
-    //         )
-    //     }).catch((error)=>{
-    //             console.log(error)
-    //     })
-    // };
+   
+getdata2 = (userid) =>{
+        axios.get(`https://api.stackexchange.com/2.2/users/${this.state.userid}/questions?order=desc&sort=activity&site=stackoverflow`).then((response)=>{
+            this.setState(
+                {   data2: response.data.items[0]
+                }
+            )
+        }).catch((error)=>{
+                console.log(error)
+        })
+    };
 
     profiledata = ()=>{
         const image= this.state.data.profile_image
@@ -71,12 +74,14 @@ export class ProfilePage extends React.Component{
 
     render()
     {
-       // this.getdata2()
-       // console.log(this.state.data2)
+       this.getdata2()
+      // console.log(this.state.data2)
+       let userid=this.state.userid
         return(
             <div>
                 <Header username={this.state.username} handleChange={this.handleChange.bind(this)}/>
                 {this.profiledata()}
+                
             </div>
         )
     }
