@@ -1,15 +1,17 @@
 import React from 'react';
 import axios from 'axios';
 import {ProfileData} from '../Profiledata/ProfileData.js';
-import Header from '../../Header/Header';
-import Answer from '../../Answer'
+import {QuestionsData} from '../QuestionsData/QuestionsData.js';
+import Header from '../../Header/Header'
 
-export class ProfilePage extends React.Component{
+export class ProfilePage extends React.Component
+{
     
     state= {
         username:this.props.location.state.username,
         data:[],
         userid:null,
+        qdata:[]
     }    
     handleChange=(user1)=>
     {
@@ -17,30 +19,27 @@ export class ProfilePage extends React.Component{
     }
     componentDidMount = () =>
     {
-        console.log(this.state.username)
+        //console.log(this.state.username)
         this.getdata()
         //this.getdata2()
     }
-    componentDidUpdate=(prevState,prevProps)=>
-    {
-        //this.getdata()
-    }
-    getdata = (username) =>{
+    componentDidUpdate(){
+        if(this.state.userid)
+        {
+            if(!this.state.qdata ||this.state.qdata && this.state.qdata.id!== this.state.userid){
+            axios.get(`https://api.stackexchange.com/2.2/users/${this.state.userid}/questions?order=desc&sort=activity&site=stackoverflow`).then((response)=>{
+              //this.setState({qdata:response.data.items})
+             console.log(response.data)
+        
+                } );
+               
+            } 
+        } }
+    getdata = () =>{
         axios.get(`https://api.stackexchange.com/2.2/users?order=desc&sort=reputation&inname=${this.state.username}&site=stackoverflow`).then((response)=>{
             this.setState(
                 {   data: response.data.items[0],
                     userid: response.data.items[0].user_id
-                }
-            )
-        }).catch((error)=>{
-                console.log(error)
-        })
-    };
-   
-getdata2 = (userid) =>{
-        axios.get(`https://api.stackexchange.com/2.2/users/${this.state.userid}/questions?order=desc&sort=activity&site=stackoverflow`).then((response)=>{
-            this.setState(
-                {   data2: response.data.items[0]
                 }
             )
         }).catch((error)=>{
@@ -70,20 +69,28 @@ getdata2 = (userid) =>{
             />
             </div>
         )
-    }
+    };
+    // questionsdata = () =>{
+    //     return (
+    //             <div>
+    //                 <QuestionsData 
+    //                     number={this.state.qdata.length}
+    //                 />
+    //             </div>
+    //         )};
 
     render()
     {
-       this.getdata2()
-      // console.log(this.state.data2)
-       let userid=this.state.userid
         return(
             <div>
                 <Header username={this.state.username} handleChange={this.handleChange.bind(this)}/>
                 {this.profiledata()}
-                
+                {/* if({this.state.qdata})
+                {
+                this.questionsdata()
+                } */}
             </div>
+           
         )
-    }
+    } 
 }
-
