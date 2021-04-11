@@ -12,8 +12,9 @@ export class AnswersData extends Component{
         {this.props.ans.map((ans) =>
         <li key={ans.answer_id}>
           <p>question id:{ans.question_id}</p>
-          <p>Answerid:{ans.answer_id}</p>
-          <a href={ans.answer_id}>{ans.body}</a>
+          <p>question:{ans.title}</p>
+          <a target="_blank" href={ans.link}>answerid:{ans.answer_id}</a>
+
         </li>
       )}
     </ul>

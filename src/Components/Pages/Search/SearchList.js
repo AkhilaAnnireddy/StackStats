@@ -3,7 +3,7 @@ import axios from 'axios';
 import './searchlist.css';
 import { Link } from "react-router-dom";
 import { Search } from './Search.js';
-
+import Header from '../../Header/Header';
 
 export class SearchList extends React.Component{
 
@@ -11,12 +11,22 @@ export class SearchList extends React.Component{
         inname : this.props.location.state.inname,
         result :'',
     }
-
+    handleChange=(user1)=>
+    {
+        this.setState({inname:user1})
+    }
     componentDidMount = () =>
     {
         this.getdata()
     }
-
+    componentDidUpdate=(prevProps,prevState)=>
+    {
+        if(prevState.inname!==this.state.inname && prevProps.username!==prevState.inname)
+        {
+            this.getdata()
+        }
+    }
+    
     getdata = () =>{
         axios.get(`https://api.stackexchange.com/2.2/users?order=desc&sort=reputation&inname=${this.state.inname}&site=stackoverflow`).then((response)=>{
             this.setState(
@@ -55,6 +65,7 @@ export class SearchList extends React.Component{
             console.log(this.state.result)
         return(
             <div>
+                <Header username={this.state.username} handleChange={this.handleChange.bind(this)}/>
                 {this.getprofilelist()}
             </div>
         )

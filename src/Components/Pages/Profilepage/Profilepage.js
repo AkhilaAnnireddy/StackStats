@@ -9,36 +9,21 @@ export class ProfilePage extends React.Component
 {
     
     state= {
-        username:'',
-        data:[],
-        userid:null,
-        qdata:[],
-        adata:[],
         userid:this.props.match.params.user_id,
         data:[],
-        qdata:[]
+        qdata:[],
+        adata:[],
     }    
-    handleChange=(user1)=>
+    handleChange(user1)
     {
-        this.setState({username:user1})
+    this.props.history.push({pathname:'/searchlist',state:{inname: user1}});
     }
     componentDidMount = () =>
     {
-        this.handleChange(this.props.location.state.username)
+        this.getdata()
+        this.getdata2()
+        this.getdata3()
     }
-    componentDidUpdate(prevProps, prevState){
-        console.log(prevState.username)
-        console.log(this.state.username)
-        if(prevState.userid!==this.state.userid)
-        {
-            this.getdata2()
-            this.getdata3()
-        }
-        if(prevState.username!==this.state.username)
-        {
-            this.getdata()
-        
-        } }
     getdata = () =>{
         axios.get(`https://api.stackexchange.com/2.2/users/${this.state.userid}?order=desc&sort=reputation&site=stackoverflow`).then((response)=>{
             this.setState(
@@ -71,7 +56,7 @@ export class ProfilePage extends React.Component
     {
         if(this.state.userid)
         {
-        axios.get(`https://api.stackexchange.com/2.2/users/${this.state.userid}/answers?order=desc&sort=activity&site=stackoverflow&filter=!-*L4_-_O86_y`).then((response)=>{
+        axios.get(`https://api.stackexchange.com/2.2/users/${this.state.userid}/answers?order=desc&sort=activity&site=stackoverflow&filter=!--1nZx2S8rdl`).then((response)=>{
             //this.setState( {   answers: response.data})
             //console.log(response.data)
             this.setState(
@@ -93,7 +78,7 @@ export class ProfilePage extends React.Component
            <div>
            
             <ProfileData
-                userid={this.state.user_id}
+                userid={this.state.userid}
                 displayname={this.state.data.display_name}
                 link= { this.state.data.link }
                 profileimage={image}

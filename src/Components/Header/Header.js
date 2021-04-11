@@ -22,7 +22,6 @@ class Header extends Component{
     {
         console.log(this.state.username)
         
-        this.props.history.push({pathname:'/profile/'+this.state.username,state:{username: this.state.username}});
         this.props.handleChange(this.state.username)
     }
     render(){
