@@ -6,7 +6,7 @@ export class QuestionsData extends Component{
     render()
     {
         return(<div>
-            <p><b>Total Questions:</b>{this.props.number}</p>
+            <h6>Total Questions Answered</h6>
         </div>)
     }
 }
