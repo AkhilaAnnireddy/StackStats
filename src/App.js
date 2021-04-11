@@ -2,6 +2,7 @@
 // import './App.css';
 import LandingPage  from './Components/Pages/Landingpage/Landingpage.js';
 import { ProfilePage } from './Components/Pages/Profilepage/Profilepage.js';
+import { SearchList } from './Components/Pages/Search/SearchList.js';
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,7 +16,8 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={LandingPage}/>
-          <Route exact path='/profile/:username' component = {ProfilePage}/>
+          <Route exact path='/searchlist' component = {SearchList}/>
+          <Route exact path='/profile/:user_id' component = {ProfilePage}/>
         </Switch>
       </Router>
     </div>

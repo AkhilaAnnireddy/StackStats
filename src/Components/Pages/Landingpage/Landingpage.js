@@ -5,17 +5,17 @@ class LandingPage extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      username: ''
+      inname: ''
     }
   }
 
   handleSearch (e) {
-    this.setState({ username: e.target.value })
+    this.setState({ inname: e.target.value })
   }
 
   handleGoClick = (e) =>{
       e.preventDefault()
-      this.props.history.push({pathname:'/profile/'+this.state.username,state:{username: this.state.username}});
+      this.props.history.push({pathname:'/searchlist',state:{inname: this.state.inname}});
   }
 
   render () {
@@ -29,7 +29,7 @@ class LandingPage extends Component {
             size='45'
             placeholder='Find Stackoverflow users...'
             onChange={this.handleSearch.bind(this)}
-            value={this.state.username} 
+            value={this.state.inname} 
            
             />
              <button
