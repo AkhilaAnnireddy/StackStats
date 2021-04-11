@@ -2,16 +2,18 @@ import React from 'react';
 import axios from 'axios';
 import {ProfileData} from '../Profiledata/ProfileData.js';
 import {QuestionsData} from '../QuestionsData/QuestionsData.js';
-import Header from '../../Header/Header'
+import {AnswersData} from '../AnswersData/AnswersData.js';
+import Header from '../../Header/Header';
 
 export class ProfilePage extends React.Component
 {
     
     state= {
-        username:this.props.location.state.username,
+        username:'',
         data:[],
         userid:null,
-        qdata:[]
+        qdata:[],
+        adata:[],
     }    
     handleChange=(user1)=>
     {
@@ -19,21 +21,20 @@ export class ProfilePage extends React.Component
     }
     componentDidMount = () =>
     {
-        //console.log(this.state.username)
-        this.getdata()
-        //this.getdata2()
+        this.handleChange(this.props.location.state.username)
     }
-    componentDidUpdate(){
-        if(this.state.userid)
+    componentDidUpdate(prevProps, prevState){
+        console.log(prevState.username)
+        console.log(this.state.username)
+        if(prevState.userid!==this.state.userid)
         {
-            if(!this.state.qdata ||this.state.qdata && this.state.qdata.id!== this.state.userid){
-            axios.get(`https://api.stackexchange.com/2.2/users/${this.state.userid}/questions?order=desc&sort=activity&site=stackoverflow`).then((response)=>{
-              //this.setState({qdata:response.data.items})
-             console.log(response.data)
+            this.getdata2()
+            this.getdata3()
+        }
+        if(prevState.username!==this.state.username)
+        {
+            this.getdata()
         
-                } );
-               
-            } 
         } }
     getdata = () =>{
         axios.get(`https://api.stackexchange.com/2.2/users?order=desc&sort=reputation&inname=${this.state.username}&site=stackoverflow`).then((response)=>{
@@ -46,6 +47,41 @@ export class ProfilePage extends React.Component
                 console.log(error)
         })
     };
+    getdata2=()=>{
+        if(this.state.userid)
+        {
+            axios.get(`https://api.stackexchange.com/2.2/users/${this.state.userid}/questions?order=desc&sort=activity&site=stackoverflow`).then((response)=>{
+              //this.setState({qdata:response.data.items})
+             //console.log(response.data)
+             this.setState(
+                 {
+                 qdata:response.data.items,
+                 }
+             )
+        
+                } ).catch((error)=>{
+                    console.log(error)
+            });
+               
+            } 
+    }
+    getdata3=()=>
+    {
+        if(this.state.userid)
+        {
+        axios.get(`https://api.stackexchange.com/2.2/users/${this.state.userid}/answers?order=desc&sort=activity&site=stackoverflow&filter=!-*L4_-_O86_y`).then((response)=>{
+            //this.setState( {   answers: response.data})
+            //console.log(response.data)
+            this.setState(
+                {
+                adata:response.data.items,
+                }
+            )
+        }).catch((error)=>{
+                console.log(error)
+        })
+    }
+    }
 
     profiledata = ()=>{
         const image= this.state.data.profile_image
@@ -70,25 +106,29 @@ export class ProfilePage extends React.Component
             </div>
         )
     };
-    // questionsdata = () =>{
-    //     return (
-    //             <div>
-    //                 <QuestionsData 
-    //                     number={this.state.qdata.length}
-    //                 />
-    //             </div>
-    //         )};
-
+    questionsdata = () =>{
+        return (
+                <div>
+                    <QuestionsData 
+                        number={this.state.qdata.length}
+                    />
+                </div>
+            )};
+    answersdata = () =>{
+        return (
+            <div>
+                <AnswersData ans={this.state.adata}
+                            />
+            </div>
+        )};
     render()
     {
         return(
             <div>
                 <Header username={this.state.username} handleChange={this.handleChange.bind(this)}/>
                 {this.profiledata()}
-                {/* if({this.state.qdata})
-                {
-                this.questionsdata()
-                } */}
+                {this.questionsdata()}
+                {this.answersdata()}
             </div>
            
         )
