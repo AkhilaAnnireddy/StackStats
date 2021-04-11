@@ -14,6 +14,9 @@ export class ProfilePage extends React.Component
         userid:null,
         qdata:[],
         adata:[],
+        userid:this.props.match.params.user_id,
+        data:[],
+        qdata:[]
     }    
     handleChange=(user1)=>
     {
@@ -37,10 +40,9 @@ export class ProfilePage extends React.Component
         
         } }
     getdata = () =>{
-        axios.get(`https://api.stackexchange.com/2.2/users?order=desc&sort=reputation&inname=${this.state.username}&site=stackoverflow`).then((response)=>{
+        axios.get(`https://api.stackexchange.com/2.2/users/${this.state.userid}?order=desc&sort=reputation&site=stackoverflow`).then((response)=>{
             this.setState(
                 {   data: response.data.items[0],
-                    userid: response.data.items[0].user_id
                 }
             )
         }).catch((error)=>{
@@ -91,7 +93,7 @@ export class ProfilePage extends React.Component
            <div>
            
             <ProfileData
-                userid={this.state.userid}
+                userid={this.state.user_id}
                 displayname={this.state.data.display_name}
                 link= { this.state.data.link }
                 profileimage={image}

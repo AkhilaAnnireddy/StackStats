@@ -1,0 +1,22 @@
+.result {
+  height: 200px;
+  width: 200px;
+  padding: 8px;
+  display: inline-flex;
+  box-shadow: 1px 1px 9px 1px darkgrey;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.result img {
+  height: 100px;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.name {
+  text-align: center;
+}
