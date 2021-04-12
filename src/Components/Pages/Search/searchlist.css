@@ -1,9 +1,21 @@
+.containers{
+margin-left: 7%;
+}
+.head{
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: Comic Sans MS;
+  color: rgb(22, 23, 105);
+  font-size: 25px;
+}
 .result {
   height: 200px;
   width: 200px;
   padding: 8px;
   display: inline-flex;
-  box-shadow: 1px 1px 9px 1px darkgrey;
+  box-shadow: 2px 2px rgb(181, 181, 181);
+  border:2px solid rgb(181, 181, 181);
   border-radius: 4px;
   cursor: pointer;
   margin: 20px;

@@ -23,7 +23,7 @@ class LandingPage extends Component {
       
         <div className='searchbar-container centered bg'>
           <form className='example' onSubmit={e => e.preventDefault()}>
-            <h1>Dev-Stacks</h1>
+            <h1>StackStats</h1>
             <input
             type='text'
             size='45'
@@ -32,11 +32,10 @@ class LandingPage extends Component {
             value={this.state.inname} 
            
             />
-             <button
+             <span className="search-btn"
             type='submit'
-            onClick={this.handleGoClick.bind(this)}>
-            <i className="fas fa-search"></i>
-            </button>
+            onClick={this.handleGoClick.bind(this)}
+            />
           </form>
         </div>
     )

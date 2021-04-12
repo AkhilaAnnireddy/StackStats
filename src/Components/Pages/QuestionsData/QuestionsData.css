@@ -1,15 +1,30 @@
 .questions {
-  align-self: center;
   height: 300px;
   width: auto;
-  padding: 15px;
-  display: flex;
-  box-shadow: 1px 1px 9px 1px darkgrey;
+  padding: 0px;
+  border:1px solid rgb(203, 203, 203);
+  box-shadow: 1px 1px rgb(203, 203, 203);
   border-radius: 4px;
   margin-top: 15px;
+  margin-bottom:35px ;
   overflow: auto;
 }
 
+.totalques{
+  text-align: center;
+  height:30px;
+  width: auto;
+  color: white;
+  background-color: #343a40 ;
+  
+}
+.totalques p{
+  padding-top: 3px;
+}
+ .ques{
+margin: 15px;
+
+} 
 .highlight{
   font-weight:600;
   color: #214e80;

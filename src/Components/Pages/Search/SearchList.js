@@ -44,14 +44,17 @@ export class SearchList extends React.Component{
         const {result} = this.state;
         if(Object.keys(result).length && result.length){
             return(
-                <div>
+                <div className="containers">
+                 <div className="head">
+                        <p>Cool! Take a look. {result.length}  users share your name 🤞</p>
+                    </div>
                     {result.map((result, index)=>{
                         return(
                             <Link
                                 key={"profile" + index}
                                 to={"/profile/"+result.user_id}
                             >
-                            <Search inname={result.display_name } image={result.profile_image} link={result.link} userid={result.user_id}/>
+                            <Search inname={result.display_name } image={result.profile_image} link={result.link} userid={result.user_id} number={result.length}/>
                             </Link>
                         )
                     })}

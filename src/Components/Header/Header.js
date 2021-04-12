@@ -29,9 +29,9 @@ class Header extends Component{
             <header>
 			<div >
 				<nav className='navbar navbar-expand-md navbar-dark bg-dark'>
-					<Link className='navbar-brand text-white logo' to='/'>
-                        DevStacks
-					</Link>
+                <a class="navbar-brand" href="#">
+                    <img src='././Images.logo.webp' width="30" height="30" class="d-inline-block align-top" />
+                    StackStats </a>
                     <ul className='navbar-nav ml-auto'>
                     <div className='searchbar-container justify-content-end'>
                     <form className='searchbar' onSubmit={e => e.preventDefault()}>
