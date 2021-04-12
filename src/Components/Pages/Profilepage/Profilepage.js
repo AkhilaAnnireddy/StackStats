@@ -16,7 +16,7 @@ export class ProfilePage extends React.Component
     }    
     handleChange(user1)
     {
-    this.props.history.push({pathname:'/searchlist',state:{inname: user1}});
+        this.props.history.push({pathname:'/searchlist',state:{inname: user1}});
     }
     componentDidMount = () =>
     {
@@ -42,7 +42,7 @@ export class ProfilePage extends React.Component
              //console.log(response.data)
              this.setState(
                  {
-                 qdata:response.data.items,
+                    qdata:response.data.items,
                  }
              )
         
@@ -61,7 +61,7 @@ export class ProfilePage extends React.Component
             //console.log(response.data)
             this.setState(
                 {
-                adata:response.data.items,
+                    adata:response.data.items,
                 }
             )
         }).catch((error)=>{
