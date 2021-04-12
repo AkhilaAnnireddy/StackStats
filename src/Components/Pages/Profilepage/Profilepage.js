@@ -114,8 +114,10 @@ export class ProfilePage extends React.Component
             <div>
                 <Header username={this.state.username} handleChange={this.handleChange.bind(this)}/>
                 {this.profiledata()}
-                {this.questionsdata()}
-                {this.answersdata()}
+                <div className="QandA">
+                <div className="Q">{this.questionsdata()}</div>
+                <div className="A">{this.answersdata()}</div>
+                </div>
             </div>
            
         )
