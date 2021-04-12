@@ -1,13 +1,12 @@
 .profile {
   align-self: center;
   height: 200px;
-  width: 1000px;
+  width: 100%;
   padding: 15px;
   display: flex;
   box-shadow: 1px 1px 9px 1px darkgrey;
   border-radius: 4px;
   margin-top: 25px;
-  margin-left: 10%;
 }
 
 .profile img {
@@ -19,7 +18,7 @@
 .content {
   margin-left: 25px;
   padding: 12px;
-  width: 80%;
+  width: 100%;
   display: flex;
 }
 
@@ -41,6 +40,6 @@ p {
   font-size: 15px;
 }
 
-.info-2{
+.content .info-2{
   margin-left: 30%;
 }
