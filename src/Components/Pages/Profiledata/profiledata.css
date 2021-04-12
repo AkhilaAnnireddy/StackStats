@@ -7,6 +7,7 @@
   box-shadow: 1px 1px 9px 1px darkgrey;
   border-radius: 4px;
   margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .profile img {
@@ -41,5 +42,5 @@ p {
 }
 
 .content .info-2{
-  margin-left: 30%;
+  margin-left: 20%;
 }

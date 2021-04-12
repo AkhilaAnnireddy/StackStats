@@ -1,6 +1,6 @@
 .answered {
   align-self: center;
-  height: 419px;
+  height: 300px;
   width: auto;
   padding: 15px;
   display: flex;
@@ -22,15 +22,16 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  border: 1px solid linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);;
-  border-radius: 10px;
+  /* border: 1px solid linear-gradient(160deg, #0093E9 0%, #80D0C7 100%); */
+  /* border:1px solid #242726; */
+  border-radius: 0px;
   background: #f1f1f1;
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888; 
-  background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);;  
-  border-radius: 10px;
+  background: #343a40; 
+  /* background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);  */
+  border-radius: 0px;
 }
 
