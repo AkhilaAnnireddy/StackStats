@@ -1,45 +1,29 @@
 .profile {
-  align-self: center;
-  height: 200px;
+  margin-left: 0%;
+  height: 250px;
   width: 100%;
   padding: 15px;
   display: flex;
-  box-shadow: 1px 1px 9px 1px darkgrey;
+  border:1px solid rgb(203, 203, 203);
+  box-shadow: 1px 1px rgb(203, 203, 203);
   border-radius: 4px;
   margin-top: 25px;
+  margin-bottom: 35px;
 }
 
 .profile img {
-  height: 170px;
-  width: 170px;
+  margin-left: 20x;
+  margin-top: 8px;
+  height: 200px;
+  width: 200px;
   border-radius: 4px;
 }
-
-.content {
-  margin-left: 25px;
-  padding: 12px;
-  width: 100%;
-  display: flex;
-}
-
 .content .info-1 {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   margin-left: 5%;
 }
 
-p {
-  margin: 0px;
-}
-
-.content .info-1 .name {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-
-.content .info-1 .id {
-  font-size: 15px;
-}
-
-.content .info-2{
-  margin-left: 30%;
+.vals
+{
+margin:20px;
 }

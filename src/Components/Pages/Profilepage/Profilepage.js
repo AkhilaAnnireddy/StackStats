@@ -25,7 +25,7 @@ export class ProfilePage extends React.Component
         this.getdata3()
     }
     getdata = () =>{
-        axios.get(`https://api.stackexchange.com/2.2/users/${this.state.userid}?order=desc&sort=reputation&site=stackoverflow`).then((response)=>{
+        axios.get(`https://api.stackexchange.com/2.2/users/${this.state.userid}?order=desc&sort=reputation&site=stackoverflow&filter=!40k8cc.1QzANrEHsr`).then((response)=>{
             this.setState(
                 {   data: response.data.items[0],
                 }
@@ -86,6 +86,8 @@ export class ProfilePage extends React.Component
                 reputation={this.state.data.reputation}
                 employee_status={employeestatus}
                 location={this.state.data.location}
+                upvote={this.state.data.up_vote_count}
+                downvote={this.state.data.down_vote_count}
                 bronze={badges.bronze}
                 silver={badges.silver}
                 gold={badges.gold}
@@ -98,6 +100,7 @@ export class ProfilePage extends React.Component
                 <div>
                     <QuestionsData 
                         question={this.state.qdata}
+                        number={this.state.data.question_count}
                     />
                 </div>
             )};
@@ -105,7 +108,8 @@ export class ProfilePage extends React.Component
         return (
             <div>
                 <AnswersData ans={this.state.adata}
-                            />
+                number={this.state.data.answer_count}
+                />
             </div>
         )};
     render()
@@ -115,18 +119,20 @@ export class ProfilePage extends React.Component
                 <Header username={this.state.username} handleChange={this.handleChange.bind(this)}/>
                 <div className='container'>
                 {this.profiledata()}
+                
                 <div className="row ">
                     <div className="col-md-6">
-                My Recent Answers
-                {this.answersdata()}
-                </div>
-                <div className="col-md-6">
-                My recent Questions
+                   <h6> My Recent Questions</h6>
                 {this.questionsdata()}
                 </div>
+                <div className="col-md-6">
+               <h6> My Recent Answers</h6>
+                {this.answersdata()}
+                </div>
+                
                 </div>
                 </div>
-            </div>
+                </div>
            
         )
     } 

@@ -34,7 +34,7 @@ h1{
 
 form.example input[type=text] {
   margin-top: vh;
-  margin-left:8%;
+  margin-left:2.5%;
   padding: 10px;
   font-size: 17px;
   border: 3.5px solid grey;
@@ -59,4 +59,17 @@ form.example button {
 
 form.example button:hover {
   background: #87bad8;
+}
+.search-btn{
+   display: inline-block;
+   border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  position: relative;
+  left: -45px;
+  top: 11px;
+  background-image:url('../../../Images/search.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
 }

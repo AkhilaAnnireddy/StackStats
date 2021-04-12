@@ -1,36 +1,44 @@
 .answered {
-  align-self: center;
-  height: 419px;
+  height: 300px;
   width: auto;
-  padding: 15px;
-  display: flex;
-  box-shadow: 1px 1px 9px 1px darkgrey;
+  padding: 0px;
+  border:1px solid rgb(203, 203, 203);
+  box-shadow: 1px 1px rgb(203, 203, 203);
   border-radius: 4px;
   margin-top: 15px;
+  margin-bottom:35px ;
   overflow: auto;
 }
+.totalans{
+  text-align: center;
+  height:30px;
+  width: auto;
+  color: white;
+  background-color: #343a40 ;
+  
+}
+.totalans p{
+  padding-top: 3px;
+}
+ .ansr{
+margin: 15px;
+
+} 
 
 .highlight{
   font-weight:600;
   color: #214e80;
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;  }
-
 /* Track */
 ::-webkit-scrollbar-track {
-  border: 1px solid linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);;
-  border-radius: 10px;
   background: #f1f1f1;
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888; 
-  background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);;  
-  border-radius: 10px;
+  height:30px;
+  border-radius: 0px;
+  background: #343a40; 
 }
 
