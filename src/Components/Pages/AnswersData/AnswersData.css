@@ -1,13 +1,12 @@
 .answered {
   align-self: center;
   height: 419px;
-  width: 500px;
+  width: auto;
   padding: 15px;
   display: flex;
   box-shadow: 1px 1px 9px 1px darkgrey;
   border-radius: 4px;
   margin-top: 15px;
-  margin-left: 10%;
   overflow: auto;
 }
 

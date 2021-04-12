@@ -37,7 +37,7 @@ export class ProfilePage extends React.Component
     getdata2=()=>{
         if(this.state.userid)
         {
-            axios.get(`https://api.stackexchange.com/2.2/users/${this.state.userid}/questions?order=desc&sort=activity&site=stackoverflow`).then((response)=>{
+            axios.get(`https://api.stackexchange.com/2.2/users/${this.state.userid}/questions?order=desc&sort=activity&site=stackoverflow&filter=!--1nZx2S8rdl`).then((response)=>{
               //this.setState({qdata:response.data.items})
              //console.log(response.data)
              this.setState(
@@ -97,7 +97,7 @@ export class ProfilePage extends React.Component
         return (
                 <div>
                     <QuestionsData 
-                        number={this.state.qdata.length}
+                        question={this.state.qdata}
                     />
                 </div>
             )};
@@ -113,9 +113,19 @@ export class ProfilePage extends React.Component
         return(
             <div>
                 <Header username={this.state.username} handleChange={this.handleChange.bind(this)}/>
+                <div className='container'>
                 {this.profiledata()}
-                {this.questionsdata()}
+                <div className="row ">
+                    <div className="col-md-6">
+                My Recent Answers
                 {this.answersdata()}
+                </div>
+                <div className="col-md-6">
+                My recent Questions
+                {this.questionsdata()}
+                </div>
+                </div>
+                </div>
             </div>
            
         )
