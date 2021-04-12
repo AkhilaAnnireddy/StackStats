@@ -1,9 +1,46 @@
+<<<<<<< HEAD
 h6{
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     /* margin-top: 55px;
     margin-left: 10%; */
     font-weight: 700;
     font-size: 17px;
+=======
+.questions {
+    align-self: center;
+    height: 419px;
+    width: auto;
+    padding: 15px;
+    display: flex;
+    box-shadow: 1px 1px 9px 1px darkgrey;
+    border-radius: 4px;
+    margin-top: 15px;
+    overflow: auto;
+  }
+  
+  .highlight{
+    font-weight:600;
+>>>>>>> 4600287ed9a9ce5bbbdd62c45e6a1a507844cd5e
     color: #214e80;
-
-}
+  }
+  
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border: 1px solid linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);;
+    border-radius: 10px;
+    background: #f1f1f1;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+    background: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);;  
+    border-radius: 10px;
+  }
+  
+  
