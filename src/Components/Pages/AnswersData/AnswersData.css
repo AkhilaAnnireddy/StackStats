@@ -24,6 +24,25 @@
 margin: 15px;
 
 } 
+.tick
+{
+  float:right
+}
+.noans{
+  height: 268px;
+  width: auto;
+  padding: 0px;
+  border:1px solid rgb(203, 203, 203);
+  box-shadow: 1px 1px rgb(203, 203, 203);
+  border-radius: 4px;
+  color:black;
+  background-color: rgb(181,181,181);
+  margin-bottom: 0px;
+  text-align: center;
+}
+.noans p{
+  padding-top: 20%;
+}
 
 .highlight{
   font-weight:600;
