@@ -13,17 +13,38 @@
 
 .profile img {
   margin-left: 20x;
-  margin-top: 8px;
-  height: 200px;
-  width: 200px;
+  margin-top: 12.5px;
+  height: 80%;
+  width: 100%;
   border-radius: 4px;
 }
-.content .info-1 {
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
-  margin-left: 5%;
+.disp{
+  margin-top:10px;
+  margin-left:0px;
+}
+.disp p{
+  margin:0px;
+margin-top:5px;
+}
+.disp i{
+  margin-right:5px;
 }
 
-.vals
+.val
 {
 margin:20px;
+}
+.vals
+{
+  margin:15px 35px;
+}
+#value{
+  text-align: center;
+}
+.dt{
+  margin-left: 15%;
+}
+.badge img{
+  width:20px;
+  height:20px;
 }

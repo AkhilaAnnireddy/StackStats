@@ -25,6 +25,10 @@
 margin: 15px;
 
 } 
+.tick
+{
+  float:right
+}
 .highlight{
   font-weight:600;
   color: #214e80;

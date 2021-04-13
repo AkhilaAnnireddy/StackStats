@@ -1,9 +1,11 @@
 import React, {Component} from "react";
+import '../Header/Header.css';
 import Searchbar from '../Pages/Landingpage/Landingpage'
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import { withRouter} from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
-import Landingpage from "../Pages/Landingpage/Landingpage";
+import Landingpage from '../Pages/Landingpage/Landingpage';
+import logo from '../../Images/logo.jpg';
 
 class Header extends Component{
     constructor(props)
@@ -30,7 +32,7 @@ class Header extends Component{
 			<div >
 				<nav className='navbar navbar-expand-md navbar-dark bg-dark'>
                 <a class="navbar-brand" href="#">
-                    <img src='././Images.logo.webp' width="30" height="30" class="d-inline-block align-top" />
+                    <img src={logo} width="30" height="30" class="d-inline-block align-top" />
                     StackStats </a>
                     <ul className='navbar-nav ml-auto'>
                     <div className='searchbar-container justify-content-end'>
