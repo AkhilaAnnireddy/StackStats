@@ -4,7 +4,7 @@
   width: 100%;
   padding: 15px;
   display: flex;
-  border:1px solid rgb(203, 203, 203);
+  border: 1px solid rgb(203, 203, 203);
   box-shadow: 1px 1px rgb(203, 203, 203);
   border-radius: 4px;
   margin-top: 25px;
@@ -18,33 +18,37 @@
   width: 100%;
   border-radius: 4px;
 }
-.disp{
-  margin-top:10px;
-  margin-left:0px;
+.disp {
+  margin-top: 10px;
+  margin-left: 0px;
 }
-.disp p{
-  margin:0px;
-margin-top:5px;
+.disp p {
+  margin: 0px;
+  margin-top: 5px;
 }
-.disp i{
-  margin-right:5px;
+.disp i {
+  margin-right: 5px;
 }
 
-.val
-{
-margin:20px;
+.val {
+  margin: 20px;
 }
-.vals
-{
-  margin:15px 35px;
+.vals {
+  margin: 15px 35px;
 }
-#value{
+#value {
   text-align: center;
 }
-.dt{
+.dt {
   margin-left: 15%;
 }
-.badge img{
-  width:20px;
-  height:20px;
+/* .badge b {
+  font-size: 15px;
+} */
+
+.badge img {
+  margin-bottom: 10px;
+  margin-left: 5px;
+  width: 20px;
+  height: 20px;
 }

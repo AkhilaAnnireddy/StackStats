@@ -14,7 +14,6 @@ export class AnswersData extends Component{
               <ul>
                 {this.props.ans.map((ans) =>
                 <li key={ans.answer_id}>
-                 
                 <p><span className="highlight">Question</span> : {ans.title}</p>
                 <a target="_blank" href={ans.link}>AnswerId : {ans.answer_id}</a>
                  {ans.is_accepted ? <span className='tick' title='Answer Accepted'> ✔</span> :null }

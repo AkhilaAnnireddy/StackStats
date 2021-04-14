@@ -1,7 +1,7 @@
-.containers{
-margin-left: 7%;
+.containers {
+  margin-left: 7%;
 }
-.head{
+.head {
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -14,8 +14,8 @@ margin-left: 7%;
   width: 200px;
   padding: 8px;
   display: inline-flex;
-  box-shadow: 2px 2px rgb(181, 181, 181);
-  border:2px solid rgb(181, 181, 181);
+  box-shadow: 1px 1px rgb(181, 181, 181);
+  border: 2px solid rgb(181, 181, 181);
   border-radius: 4px;
   cursor: pointer;
   margin: 20px;
