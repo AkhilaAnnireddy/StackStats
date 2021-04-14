@@ -39,3 +39,18 @@
   color: white;
   background-color: #343a40 ;
 }
+.ans_chart .nodata{
+  text-align: center;
+  margin-top: 150px;
+  font-weight: 600;
+  background-color: white;
+  color: black;
+}
+.que_chart .nodata{
+  text-align: center;
+  margin-top: 150px;
+  font-weight: 600;
+  background-color: white;
+  color: black;
+}
+

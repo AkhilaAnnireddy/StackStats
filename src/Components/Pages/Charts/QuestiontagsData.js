@@ -1,6 +1,6 @@
 import React from 'react';
 import {Doughnut} from 'react-chartjs-2';
-
+import '../Profilepage/profilepage.css';
 export class Questionsgraph extends React.Component{
     render(){
         // console.log(this.props.tags)
@@ -10,6 +10,7 @@ export class Questionsgraph extends React.Component{
         //console.log(this.props.quescount)
         return(
             <div>
+                {qdata.length?
                 <Doughnut 
           
           data={{
@@ -64,7 +65,7 @@ export class Questionsgraph extends React.Component{
               
           }} }}
 
-      />
+      />:<p className='nodata'>Sufficient Data not Found</p>}
             </div>
         )
     }

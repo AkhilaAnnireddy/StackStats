@@ -1,6 +1,6 @@
 .profile {
   margin-left: 0%;
-  height: 250px;
+  height: auto;
   width: 100%;
   padding: 15px;
   display: flex;
@@ -60,4 +60,4 @@
 }
 .val p b{
   font-size: 15px;
-
+}
