@@ -31,7 +31,7 @@ class Header extends Component{
             <header>
 			<div >
 				<nav className='navbar navbar-expand-md navbar-dark bg-dark'>
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/" style={{ color:"white"}}>
                     <img src={logo} width="30" height="30" class="d-inline-block align-top" />
                     StackStats </a>
                     <ul className='navbar-nav ml-auto'>

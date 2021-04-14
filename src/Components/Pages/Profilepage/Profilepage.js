@@ -8,6 +8,7 @@ import Header from '../../Header/Header';
 import { Answersgraph } from '../Charts/AnswertagsData.js';
 import { Questionsgraph } from '../Charts/QuestiontagsData.js';
 
+
 export class ProfilePage extends React.Component
 {
     
@@ -172,14 +173,15 @@ export class ProfilePage extends React.Component
                     anscount.push(ans.answer_count)
                 )  
             })}
+
         return(
             <div>
                 <Answersgraph tags={anstag} anscount={anscount}/>
             </div>
-        )
-        }
+           )
+    }
 
-        
+      
 
 
         render()
