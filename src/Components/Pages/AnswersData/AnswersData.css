@@ -57,3 +57,9 @@
   border-radius: 0px;
   background: #343a40;
 }
+.nodata
+{
+  text-align:center;
+  margin-top: 120px;
+  font-weight: 600;
+}

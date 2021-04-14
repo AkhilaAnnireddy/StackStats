@@ -11,7 +11,8 @@ export class QuestionsData extends Component{
             <p>Total Questions Posted : {this.props.number}</p>
           </div>
           <div className="ques">
-            <ul>
+           {que.length? 
+            (<ul>
               {this.props.question.map((que) =>
               <li key={que.question_id}>
                 <p><span className="highlight">Question</span> : {que.title}</p>
@@ -20,8 +21,12 @@ export class QuestionsData extends Component{
                 <hr></hr>
               </li>
                )}
-            </ul>
+            </ul>)
+            :
+          <p className='nodata'>No Recent Questions Posted</p>
+              }
          </div>
+
         </div>)
     }
 }

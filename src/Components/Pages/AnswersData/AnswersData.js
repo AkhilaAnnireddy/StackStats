@@ -11,6 +11,7 @@ export class AnswersData extends Component{
               <p>Total Answers Posted : {this.props.number}</p>
             </div>  
             <div className='ansr'>
+              {ans.length ?
               <ul>
                 {this.props.ans.map((ans) =>
                 <li key={ans.answer_id}>
@@ -20,7 +21,9 @@ export class AnswersData extends Component{
                 <hr></hr>
                 </li>
                 )}
-              </ul>
+              </ul>:
+              <p className='nodata'>No Recent Answers Posted</p>
+                }
             </div> 
               {/* <div className='noans'> No Answers Posted Yet :( </div> */}
           </div>

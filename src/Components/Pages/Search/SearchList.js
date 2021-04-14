@@ -42,6 +42,8 @@ export class SearchList extends React.Component{
 
     getprofilelist = () =>{
         const {result} = this.state;
+        if(this.state.result.length)
+        {
         if(Object.keys(result).length && result.length){
             return(
                 <div className="containers">
@@ -61,6 +63,11 @@ export class SearchList extends React.Component{
                 </div>
             )
         }
+    }
+    else{
+        return(
+        <p className='head'>Sorry!We didn`t find the user,Try another alternative</p>
+        )}
 
     }
 

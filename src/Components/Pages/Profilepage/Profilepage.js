@@ -204,16 +204,21 @@ export class ProfilePage extends React.Component
                     
                     </div>
                     <div className='charts'>
+                    <div className="row ">
+                        <div className="col-md-6">
                     <div className="que_chart">
                     <p>Top Question Tags </p>
                     {this.questags()}
+                    </div>
+                    </div>
                     {/* <QuestionsChart /> */}
-                     </div>
+                    <div className="col-md-6">  
                     <div className='ans_chart'> 
                     <p>Top Answer Tags</p>
                     {this.anstags()}
                     {/* <AnswersChart /> */}
-        
+                    </div>
+                    </div>
                     </div>
                     </div>
                         
