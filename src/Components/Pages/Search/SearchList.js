@@ -65,7 +65,6 @@ export class SearchList extends React.Component{
     }
 
     render(){   
-            console.log(this.state.result)
         return(
             <div>
                 <Header username={this.state.username} handleChange={this.handleChange.bind(this)}/>
