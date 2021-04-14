@@ -4,6 +4,8 @@ import {ProfileData} from '../Profiledata/ProfileData.js';
 import {QuestionsData} from '../QuestionsData/QuestionsData.js';
 import {AnswersData} from '../AnswersData/AnswersData.js';
 import Header from '../../Header/Header';
+import { Answersgraph } from '../Graphs/Answersgraph.js';
+import { Questionsgraph } from '../Graphs/Questionsgraph.js';
 
 export class ProfilePage extends React.Component
 {
@@ -13,6 +15,9 @@ export class ProfilePage extends React.Component
         data:[],
         qdata:[],
         adata:[],
+        anstagdata: [],
+        questagdata:[],
+        
     }    
     handleChange(user1)
     {
@@ -23,6 +28,8 @@ export class ProfilePage extends React.Component
         this.getdata()
         this.getdata2()
         this.getdata3()
+        this.getquestagdata()
+        this.getanstagdata()
     }
     getdata = () =>{
         axios.get(`https://api.stackexchange.com/2.2/users/${this.state.userid}?order=desc&sort=reputation&site=stackoverflow&filter=!40k8cc.1QzANrEHsr`).then((response)=>{
@@ -70,6 +77,28 @@ export class ProfilePage extends React.Component
     }
     }
 
+    getanstagdata = () =>{
+        axios.get(`https://api.stackexchange.com/2.2/users/${this.state.userid}/top-answer-tags?site=stackoverflow`).then((response)=>{
+            this.setState(
+                {   anstagdata: response.data.items
+                }
+            )
+        }).catch((error)=>{
+                console.log(error)
+        })
+    };
+
+    getquestagdata = () =>{
+        axios.get(`https://api.stackexchange.com/2.2/users/${this.state.userid}/top-question-tags?site=stackoverflow`).then((response)=>{
+            this.setState(
+                {   questagdata: response.data.items
+                }
+            )
+        }).catch((error)=>{
+                console.log(error)
+        })
+    };
+
     profiledata = ()=>{
         const image= this.state.data.profile_image
         let badges={...this.state.data.badge_counts}
@@ -112,6 +141,43 @@ export class ProfilePage extends React.Component
                 />
             </div>
         )};
+
+    anstags = () =>
+        { 
+            var anstag=[];
+            var anscount=[];
+            {this.state.anstagdata.map((ans)=>{
+                return(
+                    anstag.push(ans.tag_name),
+                    anscount.push(ans.answer_count)
+                )  
+            })}
+        return(
+            <div>
+                <Answersgraph tags={anstag} anscount={anscount}/>
+            </div>
+        )
+        }
+
+    questags = () =>
+        { 
+            var questag=[];
+            var quescount=[];
+            {this.state.questagdata.map((ques)=>{
+                return(
+                    questag.push(ques.tag_name),
+                    quescount.push(ques.question_count)
+                )  
+            })}
+        return(
+            <div>
+                <Questionsgraph tags={questag} quescount={quescount}/>
+            </div>
+        )
+        }
+        
+
+
     render()
     {
         return(
@@ -119,18 +185,18 @@ export class ProfilePage extends React.Component
                 <Header username={this.state.username} handleChange={this.handleChange.bind(this)}/>
                 <div className='container'>
                 {this.profiledata()}
-                
                 <div className="row ">
+                        <div className="col-md-6">
+                    <h6> My Recent Questions</h6>
+                    {this.questionsdata()}
+                    </div>
                     <div className="col-md-6">
-                   <h6> My Recent Questions</h6>
-                {this.questionsdata()}
+                        <h6> My Recent Answers</h6>
+                            {this.answersdata()}
+                    </div>
                 </div>
-                <div className="col-md-6">
-               <h6> My Recent Answers</h6>
-                {this.answersdata()}
-                </div>
-                
-                </div>
+                    {this.anstags()}
+                    {this.questags()}
                 </div>
                 </div>
            
