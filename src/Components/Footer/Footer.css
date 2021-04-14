@@ -1,0 +1,15 @@
+.prop{
+    color:red;
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #2d5d80;
+    color: white;
+    text-align: center;
+    height: 25px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
