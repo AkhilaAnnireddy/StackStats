@@ -1,9 +1,12 @@
 import React from 'react';
 import axios from 'axios';
+import './profilepage.css';
 import {ProfileData} from '../Profiledata/ProfileData.js';
 import {QuestionsData} from '../QuestionsData/QuestionsData.js';
 import {AnswersData} from '../AnswersData/AnswersData.js';
 import Header from '../../Header/Header';
+import AnswersChart from '../Charts/AnswersChart.js';
+import QuestionsChart from '../Charts/QuestionsChart';
 
 export class ProfilePage extends React.Component
 {
@@ -130,6 +133,17 @@ export class ProfilePage extends React.Component
                 {this.answersdata()}
                 </div>
                 
+                </div>
+                <div className='charts'>
+                <div className="que_chart">
+                <p>Top Question Tags</p>
+                <QuestionsChart />
+                 </div>
+                <div className='ans_chart'> 
+                <p>Top Answer Tags</p>
+                <AnswersChart />
+    
+                </div>
                 </div>
                 </div>
                 </div>

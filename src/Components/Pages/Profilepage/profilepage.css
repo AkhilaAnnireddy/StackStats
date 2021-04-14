@@ -1,0 +1,41 @@
+.charts
+{
+    display: flex;
+}
+.que_chart{
+    height: 350px;
+    width: 540px;
+    padding: 0px;
+    border:1px solid rgb(203, 203, 203);
+    box-shadow: 1px 1px rgb(203, 203, 203);
+    border-radius: 4px;
+    margin-top: 15px;
+    margin-bottom:35px ;
+}
+.que_chart p{
+    text-align: center;
+  height:30px;
+  width: auto;
+  color: white;
+  background-color: #343a40 ;
+}
+.ans_chart{
+
+    height: 350px;
+    width: 540px;
+    padding: 0px;
+    border:1px solid rgb(203, 203, 203);
+    box-shadow: 1px 1px rgb(203, 203, 203);
+    border-radius: 4px;
+    margin-left: 40px;
+    margin-top: 15px;
+    margin-bottom:35px ;
+    float:right;
+}
+.ans_chart p{
+    text-align: center;
+  height:30px;
+  width: auto;
+  color: white;
+  background-color: #343a40 ;
+}

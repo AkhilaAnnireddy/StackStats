@@ -29,16 +29,16 @@ export class ProfileData extends Component{
                         <div className='row'>
 
                             <div className='val'>
-                                <p id='value'>{this.props.reputation}</p>
+                                <p id='cnt'>{this.props.reputation}</p>
                                 <p><b>Reputation </b></p>
                             </div>
                             <div className=' val'>
-                                <p id='value'>{this.props.upvote}</p>
+                                <p id='cnt'>{this.props.upvote}</p>
                                 <p><b>Up Votes</b></p>
                                 
                             </div>
                             <div className=' val'>
-                                <p id='value'>{this.props.downvote}</p>
+                                <p id='cnt'>{this.props.downvote}</p>
                                 <p><b>Down Votes</b></p>
                                 
                             </div>
