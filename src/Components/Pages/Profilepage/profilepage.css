@@ -3,7 +3,7 @@
     display: flex;
 }
 .que_chart{
-    height: 350px;
+    height: 400px;
     width: 540px;
     padding: 0px;
     border:1px solid rgb(203, 203, 203);
@@ -21,7 +21,7 @@
 }
 .ans_chart{
 
-    height: 350px;
+    height: 400px;
     width: 540px;
     padding: 0px;
     border:1px solid rgb(203, 203, 203);

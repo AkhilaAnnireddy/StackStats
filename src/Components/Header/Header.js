@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { withRouter} from 'react-router-dom';
 import { Redirect } from 'react-router-dom';
 import Landingpage from '../Pages/Landingpage/Landingpage';
-import logo from '../../Images/logo.jpg';
+import logo from '../../Images/logo.webp';
 
 class Header extends Component{
     constructor(props)
