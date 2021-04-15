@@ -1,0 +1,33 @@
+.abtcard{
+ text-align: center;
+    margin:0 auto;
+    margin-top: 30px;
+    width:400px;
+    height:450px;
+    box-shadow: 1px 1px rgb(181, 181, 181);
+    border: 2px solid rgb(181, 181, 181);
+    border-radius: 4px;
+}
+
+
+.abtcard img{
+    margin-top: 20px;
+    margin-bottom: 5px;
+    width:300px;
+    height:300px;
+    border:2px solid #343a40;
+}
+.abtcard a{
+    color: #343a40;
+   
+}
+#git{
+    margin-top:10px ;
+}
+
+.ico{
+    padding-right: 10px;
+    height:20px;
+    width:20px;
+    color: #343a40;
+}

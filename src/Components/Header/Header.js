@@ -1,10 +1,6 @@
 import React, {Component} from "react";
 import '../Header/Header.css';
-import Searchbar from '../Pages/Landingpage/Landingpage'
-import { Link } from 'react-router-dom';
-import { withRouter} from 'react-router-dom';
-import { Redirect } from 'react-router-dom';
-import Landingpage from '../Pages/Landingpage/Landingpage';
+import { withRouter,Link} from 'react-router-dom';
 import logo from '../../Images/logo.webp';
 
 class Header extends Component{
@@ -22,10 +18,10 @@ class Header extends Component{
     }
     handleGoClick(e)
     {
-        console.log(this.state.username)
-        
         this.props.handleChange(this.state.username)
     }
+
+  
     render(){
         return(
             <header>
@@ -51,6 +47,12 @@ class Header extends Component{
                     </form>
                     </div>
                     </ul>
+                    <div>
+                    <Link to={"./AboutUs"}>
+                        <button id='about' type='submit'>About Us</button>
+                        </Link>
+                    </div>
+                    
                     </nav>
                 
 			</div>

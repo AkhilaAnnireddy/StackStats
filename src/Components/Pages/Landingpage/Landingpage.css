@@ -13,8 +13,7 @@ body,html{
   }
   
   h1{
-    margin-top: 23vh; 
-    font-size: 43.5px;
+    margin-top: 20%; 
     font-family: "Trebuchet MS", Helvetica, sans-serif;
     color: #ffffff;
     text-shadow: 2px 2px 4px #000000;
@@ -27,104 +26,39 @@ body,html{
     transform: translate(-50%, -50%);
     text-align: center;
   }
-  
-  /* * {
-    box-sizing: border-box;
-  } */
-  
-  /* form.example input[type=text] {
-    margin-top: vh;
-    margin-left:8%;
-    padding: 10px;
-    font-size: 17px;
-    border: 3.5px solid grey;
-    float: left;
-    width: 25%;
-    background: #f1f1f1;
-    border-radius: 25px;
-    outline: none;
-  } */
-  /* 
-  form.example button {
-    padding: 10px;
-    margin: 2%;
-    background: #ffffff;
-    color: rgb(42, 33, 94);
-    font-size: 17px;
-    border: 1px solid grey;
-    border-radius: 50%;
-    cursor: pointer;
-    outline: none;
-  } */
-  
-  /* form.example button:hover {
-    background: #87bad8;
-  } */
+ 
   
   .container1{
   width: 25%;
   margin-top: 30px;
   }
   
-  .buttonIn{
-    position: relative;
-  }
+ 
   
   form.example input[type=text] {
     margin: 0px;
-    padding: 0px;
+    padding: 15px;
     width: 100%;
     outline: none;
-    height: 35px;
+    height: 40px;
     border: 2px solid grey;
     border-radius: 25px;
   }
    
   form.example button {
     position: absolute;
-    top: 0;
-    border: 2px solid grey;
-    border-radius: 25px;
-    right: 0px;
-    z-index: 2;
+    border-radius: 50%;
+    right: 10px;
     border: none;
     top: 2px;
-    height: 30px;
+    height: 35px;
     cursor: pointer;
-    color: white;
-    background-color: #1e90ff;
+    color: rgb(56, 71, 83);
+    background-color: #ffffff;
     transform: translateX(2px);
-  }
-
-  .button {
+  } 
+  button:focus {
     border: none;
-    color: white;
-    /* padding: 16px 32px; */
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    margin: 17px 5px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    border-radius: 50%;
-  }
-
-  .gitimg{
-    /* border-radius: 50%; */
-    height:80px;
-    width: 80px;
-  }
-  
-  .button2 {
-    background-color: #28c5fa; 
-    color: white; 
-    border: 2px solid #008CBA;
-  }
-  
-  .button2:hover {
-    background-color: #0a97c6;
-    color: rgb(177, 172, 172);
-    text-decoration: none;
-  }
-  
-  
+    outline: none;
+}
+ 

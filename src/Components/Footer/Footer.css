@@ -1,15 +1,25 @@
-.prop{
-    color:red;
-}
 
 footer{
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #2d5d80;
+    background-color: #4682ad;
     color: white;
     text-align: center;
-    height: 25px;
+    height: 30px;
     font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 20px;
+}
+a i{
+    color:white;
+}
+.icon{
+    margin-left: 10px;
+    border-radius: 50%;
+}
+.icon:hover{
+    background-color: white;
+    color: #4682ad;
+    border:1px solid white;
 }
