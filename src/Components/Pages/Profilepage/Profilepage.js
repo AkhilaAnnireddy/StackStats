@@ -47,8 +47,7 @@ export class ProfilePage extends React.Component
         if(this.state.userid)
         {
             axios.get(`https://api.stackexchange.com/2.2/users/${this.state.userid}/questions?order=desc&sort=activity&site=stackoverflow&filter=!--1nZx2S8rdl`).then((response)=>{
-              //this.setState({qdata:response.data.items})
-             //console.log(response.data)
+              
              this.setState(
                  {
                     qdata:response.data.items,
@@ -66,8 +65,7 @@ export class ProfilePage extends React.Component
         if(this.state.userid)
         {
         axios.get(`https://api.stackexchange.com/2.2/users/${this.state.userid}/answers?order=desc&sort=activity&site=stackoverflow&filter=!--1nZx2S8rdl`).then((response)=>{
-            //this.setState( {   answers: response.data})
-            //console.log(response.data)
+            
             this.setState(
                 {
                     adata:response.data.items,

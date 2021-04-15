@@ -25,7 +25,7 @@ class LandingPage extends Component {
       
         <div className='searchbar-container centered bg'>
           <form className='example' onSubmit={e => e.preventDefault()}>
-            <a class="button button2" href="https://github.com/AkhilaAnnireddy/Devstacks"><img className="gitimg" src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png"></img></a>
+            {/* <a class="button button2" href="https://github.com/AkhilaAnnireddy/Devstacks"><img className="gitimg" src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png"></img></a> */}
             <h1>StackStats</h1>
           <div className='buttonIn container1 centered'> 
           <input
@@ -36,7 +36,7 @@ class LandingPage extends Component {
             value={this.state.inname} 
            
             />
-             <button
+             <button className="btn-without-border"
             type='submit'
             onClick={this.handleGoClick.bind(this)}>
             <i className="fas fa-search"></i>
