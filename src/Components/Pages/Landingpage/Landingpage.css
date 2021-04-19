@@ -1,8 +1,64 @@
-/* .Landing {
-  background-image: url("./backgroundimg-1.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: repeat;
-  height: 100%;
-  width: 100%;
-} */
+/* .Landing */
+body,html{
+  height:100%;
+  margin:0;
+  }
+  .bg{
+    background: url("../../../Images/bg1.webp"); 
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  h1{
+    margin-top: 20%; 
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px #000000;
+  }
+  
+  .centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+ 
+  
+  .container1{
+  width: 25%;
+  margin-top: 30px;
+  }
+  
+ 
+  
+  form.example input[type=text] {
+    margin: 0px;
+    padding: 15px;
+    width: 100%;
+    outline: none;
+    height: 40px;
+    border: 2px solid grey;
+    border-radius: 25px;
+  }
+   
+  form.example button {
+    position: absolute;
+    border-radius: 50%;
+    right: 10px;
+    border: none;
+    top: 2px;
+    height: 35px;
+    cursor: pointer;
+    color: rgb(56, 71, 83);
+    background-color: #ffffff;
+    transform: translateX(2px);
+  } 
+  button:focus {
+    border: none;
+    outline: none;
+}
+ 

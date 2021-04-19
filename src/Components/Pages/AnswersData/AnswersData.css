@@ -1,0 +1,65 @@
+.answered {
+  height: 300px;
+  width: auto;
+  padding: 0px;
+  border: 1px solid rgb(203, 203, 203);
+  box-shadow: 1px 1px rgb(203, 203, 203);
+  border-radius: 4px;
+  margin-top: 15px;
+  margin-bottom: 35px;
+  overflow: auto;
+}
+.totalans {
+  text-align: center;
+  height: 30px;
+  width: auto;
+  color: white;
+  background-color: #343a40;
+}
+.totalans p {
+  padding-top: 3px;
+}
+.ansr {
+  margin: 15px;
+}
+.tick {
+  float: right;
+}
+.noans {
+  height: 268px;
+  width: auto;
+  padding: 0px;
+  border: 1px solid rgb(203, 203, 203);
+  box-shadow: 1px 1px rgb(203, 203, 203);
+  border-radius: 4px;
+  color: black;
+  background-color: rgb(181, 181, 181);
+  margin-bottom: 0px;
+  text-align: center;
+}
+.noans p {
+  padding-top: 20%;
+}
+
+.highlight {
+  font-weight: 600;
+  color: #214e80;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  height: 30px;
+  border-radius: 0px;
+  background: #343a40;
+}
+.nodata
+{
+  text-align:center;
+  margin-top: 120px;
+  font-weight: 600;
+}
