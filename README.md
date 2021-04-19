@@ -1,6 +1,4 @@
-## <font size='6'>StackStats</font>
-
-<!-- # Stackstats - An Stackoverflow  analyzer  -->
+# <font size='6'>StackStats</font>
 
 ## Team Members
 
@@ -51,4 +49,4 @@ The first command correctly bundles React in production mode and optimizes the b
 
 # Sample Screen
 
-![Input](src/Images/profile.png)
+![Input](src/Images/Profile.png)
