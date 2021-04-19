@@ -12,8 +12,6 @@
 
 <a href="https://github.com/SuprajaAlleni">Supraja Alleni</a>
 
-![Input](src/Images/Landing.png)
-
 ## Project Description
 
 This is a project built using ReachJs framework which uses Stackoverflow APIs and give an analysis of the user's activity over Stackoverflow
@@ -47,6 +45,8 @@ npm start
 
 The first command correctly bundles React in production mode and optimizes the build for the best performance. The second command allows you to serve this static file through a node server. <br/>
 
-# Sample Screen
+# Sample Screens
+
+![Input](src/Images/Landing.png)
 
 ![Input](src/Images/Profile.png)
