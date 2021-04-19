@@ -28,22 +28,25 @@
 }
 
 
-
 .abtcard{
  text-align: center;
     /* margin:0 auto; */
     margin-top: 80px;
-    width:250px;
+    width:220px;
     height:320px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     /* border: 2px solid rgb(181, 181, 181); */
     border-radius: 4px;
+    margin-left: 16px;
 }
 
+.akhilaimg{
+    margin-left: 5px;
+}
 
 .abtcard img{
     margin-bottom: 8px;
-    width:250px;
+    width:220px;
     height:200px;
     /* border:2px solid #343a40; */
 }
@@ -58,12 +61,14 @@
 }
 .git{
     font-size: 25px;
-    margin-right:15px ;
+    margin-right:10px ;
     display: inline;
+    text-align: center;
 }
 
 .ico{
     height:20px;
     width:20px;
     color: #343a40;
+    text-align: center;
 }
