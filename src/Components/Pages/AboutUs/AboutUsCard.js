@@ -6,9 +6,10 @@ function AboutUsCard(props){
         return(
             <div className='abtcard'>
                 <img src={props.img}/>
-                <h4>{props.name}</h4>
-               <p id='git'><a href={props.github}><i class="fab fa-github ico"></i>GitHub </a></p>
-               <p><a href={props.linkedin}>{props.linkedin==''?null:<i class="fab fa-linkedin ico"></i>}{linkedin}</a></p>
+                <h5>{props.name}</h5>
+                <h6><i>{props.role}</i></h6>
+               <p class='git'><a href={props.github}><i class="fab fa-github ico"></i> </a></p>
+               <p class='git'><a href={props.linkedin}>{props.linkedin==''?null:<i class="fab fa-linkedin ico"></i>}</a></p>
             </div>
         )
    

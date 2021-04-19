@@ -1,32 +1,68 @@
+.aboutimg{
+    width: 100%;
+    height: 350px;
+    margin-bottom: 10px;
+}
+.container2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 100%;
+    height: 280px;
+}
+
+  .centered1 {
+    position: absolute;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    text-shadow: 5px 5px 10px #000000;
+    font-size: 30px;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+.abtinline{
+    display: inline;
+}
+
+
+
 .abtcard{
  text-align: center;
-    margin:0 auto;
-    margin-top: 30px;
-    width:400px;
-    height:450px;
-    box-shadow: 1px 1px rgb(181, 181, 181);
-    border: 2px solid rgb(181, 181, 181);
+    /* margin:0 auto; */
+    margin-top: 80px;
+    width:250px;
+    height:320px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    /* border: 2px solid rgb(181, 181, 181); */
     border-radius: 4px;
 }
 
 
 .abtcard img{
-    margin-top: 20px;
-    margin-bottom: 5px;
-    width:300px;
-    height:300px;
-    border:2px solid #343a40;
+    margin-bottom: 8px;
+    width:250px;
+    height:200px;
+    /* border:2px solid #343a40; */
 }
 .abtcard a{
     color: #343a40;
    
 }
-#git{
-    margin-top:10px ;
+.abtcard h6{
+    font-weight:500;
+    font-size: 15px;
+    color: #2f78c2;
+}
+.git{
+    font-size: 25px;
+    margin-right:15px ;
+    display: inline;
 }
 
 .ico{
-    padding-right: 10px;
     height:20px;
     width:20px;
     color: #343a40;
