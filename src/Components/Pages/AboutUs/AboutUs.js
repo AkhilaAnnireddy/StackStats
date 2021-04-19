@@ -38,14 +38,15 @@ class AboutUs extends Component{
             <div className='card abtinline'>
             <div className="row">
                 <div className="col-md-4 justify-content-center">
+                <AboutUsCard img={Dinesh} name="Dinesh Pandikona" github="https://github.com/Tesla-Atoz" linkedin="blabla" role="Web Developer" role="Team Lead : Full stack"/>
+                </div>
+                <div className="col-md-4 justify-content-center">
                 <AboutUsCard img={Akhila} name="Akhila Annireddy" github="https://github.com/AkhilaAnnireddy" linkedin="https://www.linkedin.com/in/akhila-annireddy-900632198" role="Web Developer"/>
                 </div>
                 <div className="col-md-4 justify-content-center">
                 <AboutUsCard img={Anusha} name="Anusha Nagula" github="https://github.com/anushanagula" linkedin="https://www.linkedin.com/in/anusha-nagula-7281b2192" role="Web Developer"/>
                 </div>
-                <div className="col-md-4 justify-content-center">
-                <AboutUsCard img={Dinesh} name="Dinesh Pandikona" github="https://github.com/Tesla-Atoz" linkedin="blabla" role="Web Developer" role="Team Leader"/>
-                </div>
+                
             </div>
 
             <div className="row">
