@@ -4,7 +4,7 @@
   
 }
 #about{
-    margin-left: 30px;
+    margin-left: 0px;
     background-color: #343a40;
     color: white;
     border:1px solid gray;
@@ -13,4 +13,5 @@ form button{
     background-color: #343a40;
     color: white;
     border:1px solid gray;
+
 }
