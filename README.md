@@ -12,11 +12,9 @@
 
 <a href="https://github.com/SuprajaAlleni">Supraja Alleni</a>
 
-
-
 ## Project Description
 
-This is a project built using ReachJs framework which uses Stackoverflow APIs and give an analysis of the user's activity over Stackoverflow
+Stackstats is a webpage developed using ReactJs and ChartJs which gives analytical report of the stackoverflow users. It provides a profile page which has details regarding the user, recent activity, questions answered, regarding posts and graphs which gives statistical analysis of the tags.
 
 # Available Scripts
 
@@ -47,7 +45,10 @@ npm start
 
 The first command correctly bundles React in production mode and optimizes the build for the best performance. The second command allows you to serve this static file through a node server. <br/>
 
-# Sample Screen
+## Landing page
+
 ![Input](src/Images/Landing.png)
+
+## Profile page
 
 ![Input](src/Images/Profile.png)
