@@ -26,34 +26,40 @@ class Header extends Component{
         return(
             <header>
 			<div >
-				<nav className='navbar navbar-expand-md navbar-dark bg-dark'>
+				<nav className=' navbar navbar-expand-md navbar-dark bg-dark row'>
+                    <div className="col-sm">
                 <a class="navbar-brand" href="/" style={{ color:"white"}}>
                     <img src={logo} width="30" height="30" class="d-inline-block align-top" />
                     StackStats </a>
-                    <ul className='navbar-nav ml-auto'>
-                    <div className='searchbar-container justify-content-end'>
-                    <form className='searchbar' onSubmit={e => e.preventDefault()}>
+                    </div>
+    
+                    <div className=" col-sm-auto">
+                    <Link to="/AboutUs">
+                        <button id='about' type='submit'>About Us</button>
+                    </Link>
+                    </div>
+                    <div className="col-sm-auto">
+                    <ul className='navbar-nav'>
+                    <div className='searchbar-container '>
+                    <form className='searchbar form-inline' onSubmit={e => e.preventDefault()}>
                         <input 
                         type='text'
-                        size='45'
-                        placeholder='Find Stackoverflow users...'
+                        
+                        placeholder='Search...'
                         onChange={this.handleSearch.bind(this)}
                         value={this.state.username} />
                         <button 
                         type='submit'
                          onClick={this.handleGoClick}>
-                        <i class="fas fa-search"></i>
+                         <i class="fas fa-search"></i>
                         </button>
+                       
                     </form>
                     </div>
                     </ul>
-                    <div>
-                    <Link to={"./AboutUs"}>
-                        <button id='about' type='submit'>About Us</button>
-                        </Link>
                     </div>
-                    
                     </nav>
+
                 
 			</div>
 		</header>
