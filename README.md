@@ -12,7 +12,7 @@
 
 <a href="https://github.com/SuprajaAlleni">Supraja Alleni</a>
 
-![Input](src/Images/Landing.png)
+
 
 ## Project Description
 
@@ -48,5 +48,6 @@ npm start
 The first command correctly bundles React in production mode and optimizes the build for the best performance. The second command allows you to serve this static file through a node server. <br/>
 
 # Sample Screen
+![Input](src/Images/Landing.png)
 
 ![Input](src/Images/Profile.png)
